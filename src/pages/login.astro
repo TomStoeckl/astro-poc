@@ -1,0 +1,21 @@
+---
+import '../components/SpecialButton.ts'
+
+const headers = [{ name: 'Tom', age: 20 }, { name: 'Jerry', age: 30 }]
+---
+
+<h1>Login</h1>
+<form>
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <special-button>
+        {headers.map(header => <li>{header.name}</li>)}
+    </special-button>
+</form>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
